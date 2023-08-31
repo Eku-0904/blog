@@ -1,0 +1,26 @@
+.post{
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #FFF;
+}
+.title{
+  margin: auto;
+}
+.postContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #D6D5CB                                                                                               ;
+}
+.head{
+  font-size: 64px;
+}
+.pic{
+  width: 400px;
+  height: 300px;
+  border-radius: 1%;
+}
