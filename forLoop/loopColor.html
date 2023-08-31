@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="addElement()">Click</button>
+    <div
+      id="main"
+      style="
+        width: 600px;
+        height: 500px;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 5px;
+      "
+    ></div>
+    <script>
+      // Random color үүсгэх функц
+      function getRandomColor() {
+        let letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+      //
+      function addElement() {
+        let str = prompt("Enter a number");
+        let number = Number(str);
+        for (let i = 1; i <= number; i++) {
+          let newElement = document.createElement("div");
+          newElement.innerHTML = i
+          newElement.style.cssText =
+            "height:50px; width:50px; border-radius:50%; display: flex; justify-content: center; align-items: center;";
+          newElement.style.backgroundColor = getRandomColor(); // Random color-оо элементдээ өгөх
+          newElement.style.color = getRandomColor()
+          document.getElementById("main").appendChild(newElement);
+        }
+      }
+    </script>
+  </body>
+</html>

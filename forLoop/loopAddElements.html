@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: linear-gradient(45deg, rgb(42, 38, 38), rgb(158, 129, 129));
+">
+    <button 
+    style="background-color: rgb(224, 61, 230);"
+     onclick="addElement()">Click me!</button>
+    <div 
+      id = "main"
+      style="
+      background: linear-gradient(135deg, #eb514b, #6f1fb6);
+      width: 500px;
+      height: 500px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      gap: 5px;"></div>
+      <script>
+        // function addElements(){
+        //     let str = propmt("random number!");
+        // }
+        function addElement() {
+        let str = prompt("Enter a number");
+        let number = Number(str);
+        for (let i = 1; i <= number; i++) {
+          let newElement = document.createElement("div");
+          newElement.style.cssText =
+            "background: linear-gradient(135deg, black, white); height:50px; width:50px; border-radius:50%;";
+          document.getElementById("main").appendChild(newElement);
+        }
+      }
+      </script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="addElement()">Click</button>
+    <div
+      id="main"
+      style="
+        width: 600px;
+        height: 500px;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 5px;
+      "
+    ></div>
+    <script>
+      function addElement() {
+        let str = prompt("Enter a number");
+        let number = Number(str);
+        for (let i = 1; i <= number; i++) {
+          let newElement = document.createElement("div");
+          newElement.style.cssText =
+            "background-color:orange; height:50px; width:50px; border-radius:50%";
+          document.getElementById("main").appendChild(newElement);
+        }
+      }
+    </script>
+  </body>
+</html> -->

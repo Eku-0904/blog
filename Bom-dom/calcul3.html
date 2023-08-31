@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+      .container {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgb(249, 244, 235);
+      }
+      .btn {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(238, 202, 156);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+      .btn:hover {
+        background-color: rgb(242, 212, 172);
+      }
+      .col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        /* flex-direction: row; */
+      }
+      #text {
+        color: white;
+        font-size: 40px;
+        background-color: rgb(48, 123, 124);
+        width: 200px;
+        padding: 5px 10px;
+        text-align: end;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col">
+        <div id="text" style="">0</div>
+      </div>
+      <div class="col">
+        <div class="btn" onclick="print(this.id)" id="1">1</div>
+        <div class="btn" onclick="print(this.id)" id="2">2</div>
+        <div class="btn" onclick="print(this.id)" id="3">3</div>
+      </div>
+      <div class="col">
+        <div class="btn btn-secondary" onclick="clearNumber()">AC</div>
+        <div class="btn btn-secondary" onclick="operate('add')">+</div>
+        <div class="btn btn-secondary" onclick="calculate()">=</div>
+      </div>
+    </div>
+    <script>
+      let current_number = "";
+      let previous_number = "";
+      let current_operator = "";
+      function print(number) {
+        current_number = current_number + number;
+        document.getElementById("text").innerHTML = current_number;
+      }
+      function operate(operator) {
+        previous_number = current_number;
+        current_number = "";
+        current_operator = operator;
+      }
+      function calculate() {
+        number1 = Number(previous_number);
+        number2 = Number(current_number);
+        if (current_operator == "add") {
+          current_number = (number1 + number2).toString();
+        }
+        document.getElementById("text").innerHTML = current_number;
+        previous_number = "";
+        current_operator = "";
+      }
+      function clearNumber() {
+        current_number = "";
+        previous_number = "";
+        current_operator = "";
+        document.getElementById("text").innerHTML = 0;
+      }
+    </script>
+  </body>
+</html>

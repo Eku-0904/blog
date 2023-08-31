@@ -1,0 +1,88 @@
+i:nth-child(1) {
+    color: rgb(255, 166, 0);
+    transform: rotate(45deg);
+    font-size: 20px;
+    animation-delay: 2s;
+}
+i:nth-child(2) {
+    color: rgb(167, 113, 13);
+    transform: rotate(45deg);
+    font-size: 30px;
+    animation-delay: 3s;
+}
+i:nth-child(3) {
+    color: rgb(242, 200, 122);
+    transform: rotate(45deg);
+    font-size: 25px;
+    animation-delay: 1s;
+}
+i:nth-child(4) {
+    color: rgb(162, 124, 53);
+    transform: rotate(45deg);
+    font-size: 27px;
+    animation-delay: .5s;
+}
+i:nth-child(5) {
+    color: rgb(233, 168, 48);
+    transform: rotate(45deg);
+    font-size: 32px;
+    animation-delay: 2.8s;
+}
+i:nth-child(6) {
+    color: rgb(220, 182, 113);
+    transform: rotate(45deg);
+    font-size: 36px;
+    animation-delay: 3s;
+}
+i:nth-child(7) {
+    color: rgb(147, 101, 15);
+    transform: rotate(45deg);
+    font-size: 34.7px;
+    animation-delay: 3.6s;
+}
+i:nth-child(8) {
+    color: rgb(231, 169, 54);
+    transform: rotate(45deg);
+    font-size: 31.1px;
+    animation-delay: 4.6s;
+}
+i:nth-child(9) {
+    color: rgb(252, 201, 105);
+    transform: rotate(45deg);
+    font-size: 28.6px;
+    animation-delay: 5.6s;
+}
+i:nth-child(10) {
+    color: rgb(137, 101, 33);
+    transform: rotate(45deg);
+    font-size: 40px;
+    animation-delay: 5s;
+}
+i:nth-child(11) {
+    color: rgb(225, 155, 26);
+    transform: rotate(45deg);
+    font-size: 37.1px;
+    animation-delay: 3.2s;
+}
+i:nth-child(12) {
+    color: rgb(188, 129, 19);
+    transform: rotate(45deg);
+    font-size: 20px;
+    animation-delay: 4.6s;
+}
+div{
+    margin-top: -300px;
+}
+i{
+    width: 21%;
+    animation: anim 7s ease-in-out infinite;
+    transform:  translateY(-120%) rotate(0deg);
+}
+@keyframes anim{
+    0%{
+        transform:  translateY(-120%) rotate(0deg);
+    }
+    100%{
+        transform: translateY(130vh) rotate(-360deg);
+    }
+}

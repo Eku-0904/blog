@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="calculate_1()">Click here!</button>
+  <script>
+    function calculate_1() {
+      let number = prompt("write here your fav number");
+      let i = Number(number)
+      for( ; i <= 1000 && i > 0; i ++){
+        if (i % 2 == 0)
+        console.log(i)
+      }
+    }
+  </script>
+</body>
+</html>

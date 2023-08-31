@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="count">-5</div>
+    <!-- button дээр дарахад start функц ажиллана -->
+    <button onclick="start()">start</button>
+    <script>
+      function start() {
+        setInterval(count, 1000); // start функц маань 1000 миллисекунд буюу 1 секунд бүрт count гэсэн функцыг ажиллуулж байна.
+        // setInterval функцыг ажиллуулахдаа setTimeout тай ижил ажиллуулах функцээ хаалтгүйгээр бичээд таслалын араас хэдэн миллисекунд бүрт энэ функцээ ажиллуулахаа бичдэг.
+        // ялгаа: setTimeout нь заасан хугацааны дараа 1 удаа ажиллаад дуусдаг бол setInterval-ыг ашиглавал заасан хугацааны давтамжтайгаар байнга ажиллах юм.
+      }
+      let number = -5;
+      function count() {
+        document.getElementById("count").innerHTML = number;
+        number += 2;
+      }
+    </script>
+  </body>
+</html>

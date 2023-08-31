@@ -1,0 +1,40 @@
+.duk{
+    width: 200px;
+    height: 200px;
+    background: hotpink; border: 10px solid black;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88vh;
+    animation-name: duk;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+
+}
+/* @keyframes car {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translateX(200px) translateY(200px);
+    }
+} */
+@keyframes duk {
+  0% {
+  transform: translate(-100px, -100px);
+  }
+  25%{
+  transform: translate(100px,-100px);
+  }
+  50% {
+  transform: translate(100px,100px);
+   }
+   75%{
+  transform: translate(-100px,100px);
+   }
+  100% {
+  transform: translate(-100px, -100px);
+   }
+  }

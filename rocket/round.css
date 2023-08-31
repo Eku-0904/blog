@@ -1,0 +1,27 @@
+.all{
+    height: 88vh ;
+    width: 100vw ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88vh;
+}
+.round{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    animation-name: round;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+@keyframes round {
+    from {
+        transform: translateX(-200);
+    }
+    to {
+        transform: translate(500px,500px) scale(.1);
+        border-radius: 50%;
+        background-color: red;
+     }
+    }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body
+    style="
+      width: 88vw;
+      height: 88vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    "
+  >
+    <div
+      class="box"
+      onclick="openWindow()"
+      style="
+        background-color: aqua;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      click me
+    </div>
+    <script>
+      function openWindow() {
+        let url = "http://www.google.com";
+        window.open(url, "");
+        document.getElementById("box").style.width = "100px";
+        document.getElementById("box").style.height = "100px";
+      }
+    </script>
+  </body>
+</html>

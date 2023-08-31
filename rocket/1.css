@@ -1,0 +1,78 @@
+#header {
+    background-color: gray;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#link-all{
+display: flex;
+flex-direction: column;
+min-width: 200px;
+}
+#ALL{
+    display: flex;
+
+}
+#button{    
+background-color: blue;
+color: #fff;
+height: 50px;
+width: 150px;
+margin: 30px;
+transition-property: all;
+transition-duration: 2s;
+transition-timing-function: ease-in-out;
+border-radius: 50%;
+border: none;
+}
+#button:hover{
+background-color: red;
+height: 100px;
+width: 200px;
+margin: 30px;
+}
+#Button{
+    display: flex;
+    justify-content: center;
+    }
+    #red-sq{
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        border: 1px solid black;
+        transition-property: all;
+        transition-duration: 2s;
+    }
+    #red-sq:hover{
+        height: 50px;
+        width: 50px;
+        padding-left: 75px;
+        padding-top: 75px;
+    }
+    #red-sq1{
+        background-color: #fff;
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    #round{
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 10px solid black;
+        transition-property: all;
+        transition-duration: 2s;
+    }
+    #round:hover{
+        background-color: red;
+        border-radius: 0%;
+        border:0px;
+        width: 200px;
+        height: 200px;
+        transform: rotate(360deg);
+    }

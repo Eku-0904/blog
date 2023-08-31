@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #eb514b, #6f1fb6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: #fff;
+    width: 500px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 10px;
+    padding-top: 50px;
+    padding-left: 50px;
+}

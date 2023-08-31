@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="big-box">
+        <div style="height: 100px;">
+          <div id="text" style="margin-left: 15px; font-size: 32px; margin-top: 15px;">0
+          </div>
+        </div>
+      <div class="med-box">
+        
+         <button onclick="clearText()" name="clear" class="B-1">AC</button>
+         <button onclick="operate_3(this.name)" name="idk" class="B-2">+/-</button>
+         <button onclick="operate_2(this.name)" name="%" class="B-3">%</button>
+         <button onclick="operate(this.name)" name="/" class="B-4">/</button>
+         <button onclick="findButton(this.name)" name="7" class="B-5">7</button>
+         <button onclick="findButton(this.name)" name="8" class="B-6">8</button>
+         <button onclick="findButton(this.name)" name="9" class="B-7">9</button>
+         <button onclick="operate(this.name)" name="*" class="B-8">*</button>
+         <button onclick="findButton(this.name)" name="4" class="B-9">4</button>
+         <button onclick="findButton(this.name)" name="5" class="B-10">5</button>
+         <button onclick="findButton(this.name)" name="6" class="B-11">6</button>
+         <button onclick="operate(this.name)" name="minus" class="B-12">-</button>
+         <button onclick="findButton(this.name)" name="1" class="B-13">1</button>
+         <button onclick="findButton(this.name)" name="2" class="B-14">2</button>
+         <button onclick="findButton(this.name)" name="3" class="B-15">3</button>
+         <button onclick="operate(this.name)" name="add" class="B-16">+</button>
+         <button onclick="findButton(this.name)" name="0" class="B-17">0</button>
+         <button onclick="findButton(this.name)" name="." class="B-18">.</button>
+         <button onclick="calculate(this.name)" name="=" class="B-19">=</button>
+      </div>
+    </div>
+    <script>
+        let current_number = "";
+        let previous_number = "";
+        let current_operator = "";
+        function findButton(number){
+            current_number =  current_number + number
+            document.getElementById("text").innerHTML =  current_number
+        }
+        function clearText(){
+            current_number = "";
+            document.getElementById("text").innerHTML = 0;
+        }
+        function operate (operator){
+            previous_number = current_number
+            current_number = ""
+            current_operator = operator
+        }
+        function calculate(){
+
+            if (current_operator == "add"){
+                current_number=Number(previous_number)+Number(current_number)
+            }
+            else if  (current_operator == "minus") {
+                current_number=Number(previous_number)-Number(current_number)
+            }
+            else if  (current_operator == "/") {
+                current_number=Number(previous_number)/Number(current_number)
+            }
+            else if  (current_operator == "*") {
+                current_number=Number(previous_number)*Number(current_number)
+            }
+            else if  (current_operator == ".") {
+                current_number=Number(previous_number).Number(current_number)
+            }
+            // else () {
+            //     current_number = "error"
+            // }
+            document.getElementById("text").innerHTML =  current_number
+        }
+        function operate_2(operator){
+            if ( operator == "%"){
+            current_number=Number(current_number)/100
+            }
+            document.getElementById("text").innerHTML =  current_number
+        }
+        function operate_3(operator){
+            if ( operator == "idk"){
+            current_number=Number(current_number)*(-1)
+            }
+            document.getElementById("text").innerHTML =  current_number
+        }
+    </script>
+</body>
+</html>

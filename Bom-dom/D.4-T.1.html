@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="addElement()">add</button>
+    <button onclick="removeElement()">remove one</button>
+    <div style="background-color: antiquewhite; height: 500px">
+      <div
+        id="main"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          height: auto;
+          gap: 12px;
+          background-color: antiquewhite;
+          margin-top: 20px;
+        "
+      ></div>
+    </div>
+    <script>
+      let number = 0;
+      function addElement() {
+        let element = document.createElement("div");
+        element.style.cssText =
+          "height:40px; width:40px; border:1px solid black; background-color:white; display:flex; justify-content:center; align-items:center; border-radius:50%;";
+        element.innerHTML = number * number;
+        document.getElementById("main").prepend(element); // appendChild -ын оронд prepend гэж ашиглавал хамгийн эхэнд тухайн элементийг нэмдэг
+        number++;
+      }
+      function removeElement() {
+        let result = confirm("Are you sure?");
+        if (result) {
+          document.getElementById("main").firstChild.remove(); // lastChild-ын оронд firstChild гэвэл хамгийн эхний элементийг устгадаг
+          number--;
+        }
+      }
+    </script>
+  </body>
+</html>
