@@ -1,11 +1,26 @@
+/* @font-face {​
+  font-family: 'CustomFont';
+    src: url('/_next/static/fonts/your-font-file.woff2') format('woff2'),
+         url('/_next/static/fonts/your-font-file.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }​
+  body {​
+    font-family: 'CustomFont', sans-serif;
+  }​ */
+      
+
 *{
-    margin: 0;
-  }
-  
-  .box{
-    font-size: 32px;
-    color: blueviolet;
-  }
-  
-  
+  margin: 0;
+}
+
+.box{
+  font-size: 32px;
+}
+
+
+
+    
+
+    
   
